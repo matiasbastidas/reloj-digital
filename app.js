@@ -1,9 +1,9 @@
-function mostrar() {
-    let Digital = new Date()
-    let horas = Digital.getHours()
-    let minutos = Digital.getMinutes()
-    let segundos = Digital.getSeconds()
-    let dn = "AM"
+const mostrar = () => {
+    Digital = new Date()
+    horas = Digital.getHours()
+    minutos = Digital.getMinutes()
+    segundos = Digital.getSeconds()
+    dn = "AM"
     if (horas > 12) {
             dn = "PM"
             horas = horas - 12
@@ -17,5 +17,6 @@ function mostrar() {
         document.getElementById('reloj').innerText = horas + ":" + minutos + ":" +
             segundos + " " + dn
         setTimeout("mostrar()", 1000)
-    }
-    mostrar();
+}
+
+mostrar()
